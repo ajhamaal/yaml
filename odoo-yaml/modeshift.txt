@@ -1,0 +1,8 @@
+odooPassword: "Kayana123!"
+username: Mmwenesi
+hostname: willart.co.ke
+
+password: "Willart123!"
+odooEmail: mmwenesi@willart.co.ke
+database: willart_crm
+

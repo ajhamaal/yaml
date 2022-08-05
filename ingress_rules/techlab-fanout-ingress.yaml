@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: techlab-fanout-ingress
+spec:
+  rules:
+  - host: techlabenterprises.com
+    http:
+      paths:
+      - path: /kasten
+        pathType: Prefix
+        backend:
+          service:
+            name: service1
+            port:
+              number: 4200
+      - path: /dashboard
+        pathType: Prefix
+        backend:
+          service:
+            name: service2
+            port:
+              number: 8080

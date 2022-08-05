@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: zdealznstealz-odoo-86d8f8d486-8qqcg
+  namespace: zdealznstealz
+spec:
+  securityContext:
+    runAsUser: 1001
+  containers:
+  - name: zdealznstealz-odoo
+    image: golinux-registry:8090/secure-context-img:latest
+    command: ["/bin/sleep", "999999"]
+  - name: kanister-sidecar
+    image: golinux-registry:8090/secure-context-img:latest
+    command: ["/bin/sleep", "999999"]
+

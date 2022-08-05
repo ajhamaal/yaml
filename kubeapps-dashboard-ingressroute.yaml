@@ -1,0 +1,16 @@
+# dashboard.yaml
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: kubeapps
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`kubeapps.dealznstealz.co.ke`)
+#    - match: Host(`traefik.localhost`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))
+      kind: Rule
+      services:
+        - name: api@internal
+          port: KubeappsService
+#          port: 80

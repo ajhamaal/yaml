@@ -1,0 +1,9 @@
+apiVersion: metallb.io/v1beta1
+kind: AddressPool
+metadata:
+  name: addresspool-sample1
+  namespace: metallb-system
+spec:
+  protocol: layer2
+  addresses:
+    - 38.242.227.188-38.242.227.189

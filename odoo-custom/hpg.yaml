@@ -1,0 +1,29 @@
+apiVersion: v1
+data:
+  dbname: aGlwcG8=
+  host: aGlwcG8tcHJpbWFyeS5wb3N0Z3Jlcy1vcGVyYXRvci5zdmM=
+  jdbc-uri: amRiYzpwb3N0Z3Jlc3FsOi8vaGlwcG8tcHJpbWFyeS5wb3N0Z3Jlcy1vcGVyYXRvci5zdmM6NTQzMi9oaXBwbz9wYXNzd29yZD1HNiUyQVclNDA0akV4ZDJ4NiUzQiU3QiUyOSUzRG1ELiUyRm5VViZ1c2VyPWhpcHBv
+  password: RzYqV0A0akV4ZDJ4Njt7KT1tRC4vblVW
+  port: NTQzMg==
+  uri: cG9zdGdyZXNxbDovL2hpcHBvOkc2JTJBVyU0MDRqRXhkMng2OyU3QiUyOT1tRC4lMkZuVVZAaGlwcG8tcHJpbWFyeS5wb3N0Z3Jlcy1vcGVyYXRvci5zdmM6NTQzMi9oaXBwbw==
+  user: aGlwcG8=
+  verifier: U0NSQU0tU0hBLTI1NiQ0MDk2OkozUlNKS2RCOHQ3Qll5VTgwS2hHdVE9PSRESEgzdnFsc3VJOXh1U3pBWWtMMEF3UlhvQ0NCUEZJa0R5b2J3MnR5U3VjPTpFb0R0Nlp6Znp4UmUwcVRmNFFRT0UxZ1VTeXlwZFhwZ0MydHhIckh5dFdBPQ==
+kind: Secret
+metadata:
+  creationTimestamp: "2022-07-23T08:33:08Z"
+  labels:
+    postgres-operator.crunchydata.com/cluster: hippo
+    postgres-operator.crunchydata.com/pguser: hippo
+    postgres-operator.crunchydata.com/role: pguser
+  name: hippo-pguser-hippo
+  namespace: urbanbaby-test
+  ownerReferences:
+  - apiVersion: postgres-operator.crunchydata.com/v1beta1
+    blockOwnerDeletion: true
+    controller: true
+    kind: PostgresCluster
+    name: hippo
+    uid: 764890cd-f2c5-447f-b4c7-b9c218e048a5
+  resourceVersion: "21050"
+  uid: dc361c66-b01d-4cfc-aca3-e7099d40d752
+type: Opaque

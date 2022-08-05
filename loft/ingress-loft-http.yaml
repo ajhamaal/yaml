@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: loft.techlabenterprises.com
+  namespace: loft
+spec:
+  rules:
+  - host: lost.techlabenterprises.com
+    http:
+      paths:
+      - backend:
+          service:
+            name: loft-clusterip
+            port:
+              name: http
+        path: /
+        pathType: ImplementationSpecific
+status:
+  loadBalancer: {}

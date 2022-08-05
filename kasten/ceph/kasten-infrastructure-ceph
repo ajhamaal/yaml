@@ -1,0 +1,11 @@
+kasten-infrastructure
+
+192.168.53.171
+
+admin
+
+device_health_metrics, myfs-metadata, myfs-replicated, my-store.rgw.buckets.non-ec, my-store.rgw.control, my-store.rgw.log, my-store.rgw.meta, my-store.rgw.buckets.index, my-store.rgw.buckets.data
+.rgw.root,
+
+[client.admin]
+key = AQCtPsJi/lMvGxAAJbLD4lvJZ8Kzx/0CHK/RTA==

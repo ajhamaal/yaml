@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: rook-ingress
+  namespace: rook-ceph
+spec:
+  rules:
+  - host: rook.techlabenterprises.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: rook-ceph-rgw-my-store
+            port:
+              number: 80

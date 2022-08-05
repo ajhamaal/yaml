@@ -1,0 +1,59 @@
+{
+    "apiVersion": "v1",
+    "kind": "Namespace",
+    "metadata": {
+        "creationTimestamp": "2022-07-05T19:18:16Z",
+        "deletionTimestamp": "2022-07-05T21:06:40Z",
+        "labels": {
+            "kubernetes.io/metadata.name": "postgres-ha",
+            "name": "postgres-ha"
+        },
+        "name": "postgres-ha",
+        "resourceVersion": "2045507",
+        "uid": "3bbba28e-bc47-4464-b2b9-8a99cfa2ae12"
+    },
+    "spec": {
+        "finalizers": [
+        ]
+    },
+    "status": {
+        "conditions": [
+            {
+                "lastTransitionTime": "2022-07-05T21:06:56Z",
+                "message": "All resources successfully discovered",
+                "reason": "ResourcesDiscovered",
+                "status": "False",
+                "type": "NamespaceDeletionDiscoveryFailure"
+            },
+            {
+                "lastTransitionTime": "2022-07-05T21:06:56Z",
+                "message": "All legacy kube types successfully parsed",
+                "reason": "ParsedGroupVersions",
+                "status": "False",
+                "type": "NamespaceDeletionGroupVersionParsingFailure"
+            },
+            {
+                "lastTransitionTime": "2022-07-05T21:06:56Z",
+                "message": "Failed to delete all resource types, 6 remaining: Internal error occurred: {\"message\":\"Could not retrieve artifacts for prefix search\",\"function\":\"kasten.io/k10/kio/rest/clients.FetchArtifactsForSearchPrefix\",\"linenumber\":63,\"file\":\"kasten.io/k10/kio/rest/clients/catalogclient.go:63\",\"fields\":[{\"name\":\"config\",\"value\":{}},{\"name\":\"retries\",\"value\":1}],\"cause\":{\"message\":\"Get \\\"http://10.97.173.184:8000/v0/artifacts/prefixSearch?key=api-list-prefix-key-backupactions.actions.kio.kasten.io\\u0026limit=0\\u0026reverseOrder=true\\u0026value=postgres-ha%40\\\": dial tcp 10.97.173.184:8000: connect: connection refused\"}}, Internal error occurred: {\"message\":\"Could not retrieve artifacts for prefix search\",\"function\":\"kasten.io/k10/kio/rest/clients.FetchArtifactsForSearchPrefix\",\"linenumber\":63,\"file\":\"kasten.io/k10/kio/rest/clients/catalogclient.go:63\",\"fields\":[{\"name\":\"config\",\"value\":{}},{\"name\":\"retries\",\"value\":1}],\"cause\":{\"message\":\"Get \\\"http://10.97.173.184:8000/v0/artifacts/prefixSearch?key=api-list-prefix-key-exportactions.actions.kio.kasten.io\\u0026limit=0\\u0026reverseOrder=true\\u0026value=postgres-ha%40\\\": dial tcp 10.97.173.184:8000: connect: connection refused\"}}, Internal error occurred: {\"message\":\"Could not retrieve artifacts for prefix search\",\"function\":\"kasten.io/k10/kio/rest/clients.FetchArtifactsForSearchPrefix\",\"linenumber\":63,\"file\":\"kasten.io/k10/kio/rest/clients/catalogclient.go:63\",\"fields\":[{\"name\":\"config\",\"value\":{}},{\"name\":\"retries\",\"value\":1}],\"cause\":{\"message\":\"Get \\\"http://10.97.173.184:8000/v0/artifacts/prefixSearch?key=api-list-prefix-key-importactions.actions.kio.kasten.io\\u0026limit=0\\u0026reverseOrder=true\\u0026value=postgres-ha%40\\\": dial tcp 10.97.173.184:8000: connect: connection refused\"}}, Internal error occurred: {\"message\":\"Could not retrieve artifacts for prefix search\",\"function\":\"kasten.io/k10/kio/rest/clients.FetchArtifactsForSearchPrefix\",\"linenumber\":63,\"file\":\"kasten.io/k10/kio/rest/clients/catalogclient.go:63\",\"fields\":[{\"name\":\"config\",\"value\":{}},{\"name\":\"retries\",\"value\":1}],\"cause\":{\"message\":\"Get \\\"http://10.97.173.184:8000/v0/artifacts/prefixSearch?key=api-list-prefix-key-reportactions.actions.kio.kasten.io\\u0026limit=0\\u0026reverseOrder=true\\u0026value=postgres-ha%40\\\": dial tcp 10.97.173.184:8000: connect: connection refused\"}}, Internal error occurred: {\"message\":\"Could not retrieve artifacts for prefix search\",\"function\":\"kasten.io/k10/kio/rest/clients.FetchArtifactsForSearchPrefix\",\"linenumber\":63,\"file\":\"kasten.io/k10/kio/rest/clients/catalogclient.go:63\",\"fields\":[{\"name\":\"config\",\"value\":{}},{\"name\":\"retries\",\"value\":1}],\"cause\":{\"message\":\"Get \\\"http://10.97.173.184:8000/v0/artifacts/prefixSearch?key=api-list-prefix-key-restoreactions.actions.kio.kasten.io\\u0026limit=0\\u0026reverseOrder=true\\u0026value=postgres-ha%40\\\": dial tcp 10.97.173.184:8000: connect: connection refused\"}}, Internal error occurred: {\"message\":\"Could not retrieve artifacts for prefix search\",\"function\":\"kasten.io/k10/kio/rest/clients.FetchArtifactsForSearchPrefix\",\"linenumber\":63,\"file\":\"kasten.io/k10/kio/rest/clients/catalogclient.go:63\",\"fields\":[{\"name\":\"config\",\"value\":{}},{\"name\":\"retries\",\"value\":1}],\"cause\":{\"message\":\"Get \\\"http://10.97.173.184:8000/v0/artifacts/prefixSearch?key=api-list-prefix-key-restorepoints.apps.kio.kasten.io\\u0026limit=0\\u0026reverseOrder=true\\u0026value=postgres-ha%40\\\": dial tcp 10.97.173.184:8000: connect: connection refused\"}}",
+                "reason": "ContentDeletionFailed",
+                "status": "True",
+                "type": "NamespaceDeletionContentFailure"
+            },
+            {
+                "lastTransitionTime": "2022-07-05T21:07:05Z",
+                "message": "All content successfully removed",
+                "reason": "ContentRemoved",
+                "status": "False",
+                "type": "NamespaceContentRemaining"
+            },
+            {
+                "lastTransitionTime": "2022-07-05T21:07:05Z",
+                "message": "All content-preserving finalizers finished",
+                "reason": "ContentHasNoFinalizers",
+                "status": "False",
+                "type": "NamespaceFinalizersRemaining"
+            }
+        ],
+        "phase": "Terminating"
+    }
+}

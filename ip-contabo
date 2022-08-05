@@ -1,0 +1,2 @@
+ethe 38.242.227.191/19 brd 38.242.255.255 scope global ethi0
+tun0 192.168.158.192/32 scope global tunl0

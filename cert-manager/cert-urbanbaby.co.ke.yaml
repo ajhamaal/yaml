@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: urbanbaby.co.ke
+  namespace: urbanbaby
+spec:
+  secretName: urbanbaby.co.ke-tls
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: urbanbaby.co.ke
+  dnsNames:
+  - urbanbaby.co.ke

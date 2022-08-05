@@ -1,0 +1,31 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    meta.helm.sh/release-name: urbanbaby
+    meta.helm.sh/release-namespace: urbanbaby
+  creationTimestamp: "2022-04-26T22:54:33Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/instance: urbanbaby
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: odoo
+    helm.sh/chart: odoo-21.2.9
+  name: urbanbaby-odoo
+  namespace: urbanbaby
+  resourceVersion: "1428046"
+  uid: 4463386f-1ff5-40d2-8c5c-6b495075e86f
+spec:
+  rules:
+  - host: urbanbaby.co.ke
+    http:
+      paths:
+      - backend:
+          service:
+            name: urbanbaby-odoo
+            port:
+              name: http
+        path: /
+        pathType: ImplementationSpecific
+status:
+  loadBalancer: {}

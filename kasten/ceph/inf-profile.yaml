@@ -1,0 +1,30 @@
+cat <<EOF >>sample-ceph-profile.yaml
+apiVersion: config.kio.kasten.io/v1alpha1
+kind: Profile
+metadata:
+  name: sample-ceph-profile
+  namespace: kasten-io
+spec:
+  type: Infra
+  infra:
+    type: Ceph
+    ceph:
+      monitor: 10.0.0.10:6789
+      pool: my-pool
+    credential:
+      secretType: cephKeyring
+      secret:
+        apiVersion: v1
+        kind: Secret
+        name: k10-ceph-infra-secret
+        namespace: kasten-io
+EOF
+
+kubectl apply -f sample-ceph-profile.yaml
+profile.config.kio.kasten.io/sample-ceph-profile created
+
+# make sure it initializes and validates properly
+kubectl get profiles.config.kio.kasten.io --namespace kasten-io -w
+NAME                         STATUS
+sample-ceph-profile          Running
+sample-ceph-profile          Success

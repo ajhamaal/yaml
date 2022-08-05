@@ -1,0 +1,59 @@
+{
+    "apiVersion": "v1",
+    "kind": "Namespace",
+    "metadata": {
+        "creationTimestamp": "2022-07-29T00:11:06Z",
+        "deletionTimestamp": "2022-07-29T01:21:59Z",
+        "labels": {
+            "kubernetes.io/metadata.name": "dealznstealz-prod",
+            "name": "dealznstealz-prod"
+        },
+        "name": "dealznstealz-prod",
+        "resourceVersion": "1053235",
+        "uid": "d9e120e5-cfb4-4423-ad0a-c87ea91ff997"
+    },
+    "spec": {
+        "finalizers": [
+        ]
+    },
+    "status": {
+        "conditions": [
+            {
+                "lastTransitionTime": "2022-07-29T01:22:04Z",
+                "message": "Discovery failed for some groups, 1 failing: unable to retrieve the complete list of server APIs: metrics.k8s.io/v1beta1: the server is currently unable to handle the request",
+                "reason": "DiscoveryFailed",
+                "status": "True",
+                "type": "NamespaceDeletionDiscoveryFailure"
+            },
+            {
+                "lastTransitionTime": "2022-07-29T01:22:05Z",
+                "message": "All legacy kube types successfully parsed",
+                "reason": "ParsedGroupVersions",
+                "status": "False",
+                "type": "NamespaceDeletionGroupVersionParsingFailure"
+            },
+            {
+                "lastTransitionTime": "2022-07-29T01:22:32Z",
+                "message": "Failed to delete all resource types, 1 remaining: unexpected items still remain in namespace: dealznstealz-prod for gvr: /v1, Resource=pods",
+                "reason": "ContentDeletionFailed",
+                "status": "True",
+                "type": "NamespaceDeletionContentFailure"
+            },
+            {
+                "lastTransitionTime": "2022-07-29T01:22:05Z",
+                "message": "Some resources are remaining: persistentvolumeclaims. has 2 resource instances, pods. has 2 resource instances",
+                "reason": "SomeResourcesRemain",
+                "status": "True",
+                "type": "NamespaceContentRemaining"
+            },
+            {
+                "lastTransitionTime": "2022-07-29T01:22:05Z",
+                "message": "Some content in the namespace has finalizers remaining: kubernetes.io/pvc-protection in 2 resource instances",
+                "reason": "SomeFinalizersRemain",
+                "status": "True",
+                "type": "NamespaceFinalizersRemaining"
+            }
+        ],
+        "phase": "Terminating"
+    }
+}

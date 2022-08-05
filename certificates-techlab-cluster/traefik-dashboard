@@ -1,0 +1,29 @@
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  annotations:
+    helm.sh/hook: post-install,post-upgrade
+  creationTimestamp: "2022-04-23T17:29:27Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/instance: traefik
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: traefik
+    helm.sh/chart: traefik-10.19.4
+  name: traefik-dashboard
+  namespace: traefik
+  resourceVersion: "754713"
+  uid: 7f349056-6e6e-4e23-b8a8-49427b22ce6b
+spec:
+  entryPoints:
+  - traefik
+  routes:
+  - kind: Rule
+    match: PathPrefix(`/dashboard`) || PathPrefix(`/api`)
+    services:
+    - kind: TraefikService
+      name: api@internal

@@ -1,0 +1,2 @@
+kubectl run postgresql-client --rm --tty -i --restart='Never' --namespace postgresql --image docker.io/bitnami/postgresql:14.3.0-debian-10-r7 --env="PGPASSWORD=$POSTGRES_PASSWORD" \
+      --command -- psql --host postgresql -U ajhamaal -d urbanbaby_db -p 5432

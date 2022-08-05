@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: pgo-ingress
+  namespace: postgres-operator
+spec:
+  rules:
+  - host: pgo.techlabenterprises.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: hippo-pgadmin
+            port:
+              number: 5050
